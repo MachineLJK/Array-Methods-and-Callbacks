@@ -24,8 +24,11 @@ Use getFinals to do the following:
 hint - you should be looking at the stage key inside of the objects
 */
 
-function getFinals(/* code here */) {
-   /* code here */
+function getFinals(matches) {
+    return matches.filter((match)=>{
+        return match.Stage === 'Final';
+    });
+
 }
 
 
@@ -36,8 +39,10 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(/* code here */) {
-    /* code here */
+function getYears(matches, somethingElse) {
+    return somethingElse(matches).map((match)=>{
+        return match.Year;
+    })
 }
 
 
